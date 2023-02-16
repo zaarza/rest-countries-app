@@ -4,8 +4,9 @@ import './SelectRegion.scss';
 function SelectRegion() {
   return (
     <div className="select-region">
-      <select id="select-region" className="select-region__selector">
-        <option className="select-region__option" value="" disabled selected hidden>Filter by region</option>
+      <select id="select-region" className="select-region__selector" defaultValue="">
+        <option className="select-region__option" value="" disabled defaultChecked hidden>Filter by region</option>
+        <option className="select-region__option" value="">All</option>
         <option className="select-region__option" value="Lorem">Lorem ipsum</option>
         <option className="select-region__option" value="Lorem">Dolor sit</option>
       </select>

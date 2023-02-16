@@ -3,21 +3,29 @@
 .detail {
     display: flex;
     flex-direction: column;
-    padding: 50px 30px;
+    padding: 30px 30px;
+    padding-bottom: 100px;
     row-gap: 50px;
+    max-width: variable.$breakpoint-desktop;
+    margin: auto;
 
     &__body {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         row-gap: 50px;
+        column-gap: 50px;
 
         &-flag {
+            width: 100%;
             &__image {
                 width: 100%;
             }
         }
 
         &-description {
+            width: 100%;
             display: flex;
             flex-direction: column;
             row-gap: 30px;
@@ -29,7 +37,11 @@
             &__info {
                 display: flex;
                 flex-direction: column;
-                row-gap: 20px;
+                &-details {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                }
             }
 
             &__property {
@@ -83,6 +95,39 @@
 
         &-text {
             color: variable.$very-dark-blue-text;
+        }
+    }
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .detail {
+        padding-inline: 100px;
+
+        &__body {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 100px;
+
+            &-flag {
+                max-width: 500px;
+            }
+
+            &-description {
+                width: fit-content;
+
+                &__border {
+                    flex-direction: row;
+                    align-items: center;
+                    column-gap: 20px;
+                }
+
+                &__info {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    column-gap: 50px;
+                }
+            }
         }
     }
 }

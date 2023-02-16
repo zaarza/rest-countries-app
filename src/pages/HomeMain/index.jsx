@@ -5,8 +5,10 @@ import './HomeMain.scss';
 function HomeMain() {
   return (
     <main className="home-main">
-      <SearchBar />
-      <SelectRegion />
+      <div className="home-main__action">
+        <SearchBar />
+        <SelectRegion />
+      </div>
       <CountryList />
     </main>
   );

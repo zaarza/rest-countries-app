@@ -22,39 +22,41 @@ function Detail() {
 
           {/* Property */}
           <div className="detail__body-description__info">
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Native Name:</p>
-              <p className="detail__body-description__value">Belgie</p>
+            <div className="detail__body-description__info-details">
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Native Name:</p>
+                <p className="detail__body-description__value">Belgie</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Population:</p>
+                <p className="detail__body-description__value">81,770,900</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Region:</p>
+                <p className="detail__body-description__value">Europe</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Sub Region:</p>
+                <p className="detail__body-description__value">Western Europe</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Capital:</p>
+                <p className="detail__body-description__value">Berlin</p>
+              </div>
             </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Population:</p>
-              <p className="detail__body-description__value">81,770,900</p>
-            </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Region:</p>
-              <p className="detail__body-description__value">Europe</p>
-            </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Sub Region:</p>
-              <p className="detail__body-description__value">Western Europe</p>
-            </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Capital:</p>
-              <p className="detail__body-description__value">Berlin</p>
-            </div>
-          </div>
-          <div className="detail__body-description__info">
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Top Level Domain:</p>
-              <p className="detail__body-description__value">.de</p>
-            </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Currencies:</p>
-              <p className="detail__body-description__value">Euro</p>
-            </div>
-            <div className="detail__body-description__property">
-              <p className="detail__body-description__key">Languanges:</p>
-              <p className="detail__body-description__value">German</p>
+            <div className="detail__body-description__info-details">
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Top Level Domain:</p>
+                <p className="detail__body-description__value">.de</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Currencies:</p>
+                <p className="detail__body-description__value">Euro</p>
+              </div>
+              <div className="detail__body-description__property">
+                <p className="detail__body-description__key">Languanges:</p>
+                <p className="detail__body-description__value">German</p>
+              </div>
             </div>
           </div>
 

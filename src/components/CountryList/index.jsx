@@ -12,6 +12,36 @@ function CountryList() {
       <li className="country-list__item">
         <CountryCard />
       </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
+      <li className="country-list__item">
+        <CountryCard />
+      </li>
     </ul>
   );
 }
