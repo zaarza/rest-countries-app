@@ -1,0 +1,47 @@
+@use './../../styles/variable.scss';
+
+.country-card {
+    background-color: variable.$white;
+    border-radius: variable.$rounded-1;
+    box-shadow: variable.$shadow-1;
+    overflow: hidden;
+    max-width: 400px;
+
+    &__flag {
+        &-image {
+            width: 100%;
+        }
+    }
+
+    &__body {
+        padding: variable.$padding-1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &__name {
+            font-size: 1.5rem;
+        }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            &-property {
+                display: flex;
+                column-gap: 5px;
+                &__key {
+                    color: variable.$very-dark-blue-text;
+                    font-weight: variable.$weight-2;
+                }
+
+                &__value {
+                    font-weight: variable.$weight-1;
+                    color: variable.$very-dark-blue-text;
+                }
+            }
+            
+        }
+    }
+}

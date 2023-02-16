@@ -1,0 +1,32 @@
+@use './../../styles//variable.scss';
+
+.navbar {
+    width: 100%;
+    background-color: variable.$white;
+    box-shadow: variable.$shadow-1;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    &-title {
+        font-weight: variable.$weight-3;
+    }
+
+    .toggle-theme {
+        all: unset;
+        cursor: pointer;
+        font-weight: variable.$weight-1;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

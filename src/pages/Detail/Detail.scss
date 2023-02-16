@@ -1,0 +1,88 @@
+@use './../../styles/variable.scss';
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    row-gap: 50px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+
+        &-flag {
+            &__image {
+                width: 100%;
+            }
+        }
+
+        &-description {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+
+            &__name {
+                font-size: 1.5rem;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            &__property {
+                display: flex;
+                column-gap: 10px;
+            }
+
+            &__border {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                &-title {
+                    font-size: 1.2rem;
+                    font-weight: variable.$weight-1;
+                }
+
+                &-list {
+                    list-style: none;
+                    display: flex;
+                    column-gap: 15px;
+                    font-weight: variable.$weight-2;
+
+                    &__item {
+                        background-color: variable.$white;
+                        border-radius: variable.$rounded-1;
+                        box-shadow: variable.$shadow-1;
+                        padding: 10px 30px;
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+
+    &__back {
+        background-color: variable.$white;
+        box-shadow: variable.$shadow-1;
+        border-radius: variable.$rounded-1;
+        padding: 10px 30px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            fill: variable.$very-dark-blue-text;
+        }
+
+        &-text {
+            color: variable.$very-dark-blue-text;
+        }
+    }
+}

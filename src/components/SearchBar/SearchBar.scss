@@ -1,0 +1,31 @@
+@use './../../styles//variable.scss';
+
+.search-form {
+    padding: variable.$padding-1;
+    background-color: variable.$white;
+    display: flex;
+    column-gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: variable.$shadow-1;
+    border-radius: variable.$rounded-1;
+
+    .search-icon {
+        width: 24px;
+        height: 24px;
+        fill: variable.$dark-gray;
+    }
+
+    .search-input {
+        font-family: variable.$font-family;
+        color: variable.$dark-gray;
+        outline: none;
+        font-weight: variable.$weight-1;
+        border: none;
+        width: 100%;
+
+        &::placeholder {
+            color: variable.$dark-gray;
+        }
+    }
+}
