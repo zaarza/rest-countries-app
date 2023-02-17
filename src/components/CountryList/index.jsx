@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable import/no-cycle */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +8,7 @@ import './CountryList.scss';
 
 function CountryList() {
   const dispatch = useDispatch();
-  const { countries, loading } = useSelector((state) => state);
+  const { countries, loading, search } = useSelector((state) => state);
 
   useEffect(() => {
     dispatch(asyncGetAllCountries());
@@ -19,11 +20,23 @@ function CountryList() {
     );
   }
 
+  if (search.searchMode === true) {
+    return (
+      <ul className="country-list">
+        {search.searchResult.map((country) => (
+          <li className="country-list__item">
+            <CountryCard country={country} key={country.population} />
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <ul className="country-list">
-      {countries.countriesList.countries.map((country) => (
+      {countries.countriesList.map((country) => (
         <li className="country-list__item">
-          <CountryCard country={country} key={country.populaton} />
+          <CountryCard country={country} key={country.population} />
         </li>
       ))}
     </ul>

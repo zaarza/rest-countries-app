@@ -9,23 +9,17 @@ const ActionType = {
 
 const receiveAllCountriesActionCreator = (countries) => ({
   type: ActionType.RECEIVE_ALL_COUNTRIES,
-  payload: {
-    countries,
-  },
+  payload: countries,
 });
 
 const receiveDetailCountryByFullNameActionCreator = (country) => ({
   type: ActionType.RECEIVE_DETAIL_COUNTRY_BY_FULL_NAME,
-  payload: {
-    country,
-  },
+  payload: country,
 });
 
 const receiveDetailCountryByCountryCodeActionCreator = (country) => ({
   type: ActionType.RECEIVE_DETAIL_COUNTRY_BY_COUNTRY_CODE,
-  payload: {
-    country,
-  },
+  payload: country,
 });
 
 const asyncGetAllCountries = () => async (dispatch) => {
