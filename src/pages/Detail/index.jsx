@@ -14,57 +14,57 @@ function Detail() {
       </Link>
 
       <div className="detail__body">
-        <div className="detail__body-flag">
-          <img className="detail__body-flag__image" src="assets/images/de.png" alt="" />
+        <div className="detail__flag">
+          <img className="detail__flag-image" src="assets/images/de.png" alt="" />
         </div>
-        <div className="detail__body-description">
-          <h1 className="detail__body-description__name">German</h1>
+        <div className="detail__description">
+          <h1 className="detail__name">German</h1>
 
           {/* Property */}
-          <div className="detail__body-description__info">
-            <div className="detail__body-description__info-details">
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Native Name:</p>
-                <p className="detail__body-description__value">Belgie</p>
+          <div className="detail__info">
+            <div className="detail__details">
+              <div className="detail__property">
+                <p className="detail__key">Native Name:</p>
+                <p className="detail__value">Belgie</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Population:</p>
-                <p className="detail__body-description__value">81,770,900</p>
+              <div className="detail__property">
+                <p className="detail__key">Population:</p>
+                <p className="detail__value">81,770,900</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Region:</p>
-                <p className="detail__body-description__value">Europe</p>
+              <div className="detail__property">
+                <p className="detail__key">Region:</p>
+                <p className="detail__value">Europe</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Sub Region:</p>
-                <p className="detail__body-description__value">Western Europe</p>
+              <div className="detail__property">
+                <p className="detail__key">Sub Region:</p>
+                <p className="detail__value">Western Europe</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Capital:</p>
-                <p className="detail__body-description__value">Berlin</p>
+              <div className="detail__property">
+                <p className="detail__key">Capital:</p>
+                <p className="detail__value">Berlin</p>
               </div>
             </div>
-            <div className="detail__body-description__info-details">
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Top Level Domain:</p>
-                <p className="detail__body-description__value">.de</p>
+            <div className="detail__details">
+              <div className="detail__property">
+                <p className="detail__key">Top Level Domain:</p>
+                <p className="detail__value">.de</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Currencies:</p>
-                <p className="detail__body-description__value">Euro</p>
+              <div className="detail__property">
+                <p className="detail__key">Currencies:</p>
+                <p className="detail__value">Euro</p>
               </div>
-              <div className="detail__body-description__property">
-                <p className="detail__body-description__key">Languanges:</p>
-                <p className="detail__body-description__value">German</p>
+              <div className="detail__property">
+                <p className="detail__key">Languanges:</p>
+                <p className="detail__value">German</p>
               </div>
             </div>
           </div>
 
-          <div className="detail__body-description__border">
-            <h2 className="detail__body-description__border-title">Border Countries:</h2>
-            <ul className="detail__body-description__border-list">
-              <li className="detail__body-description__border-list__item">France</li>
-              <li className="detail__body-description__border-list__item">France</li>
+          <div className="detail__border">
+            <h2 className="detail__border-title">Border Countries:</h2>
+            <ul className="detail__border-list">
+              <li className="detail__border-item">France</li>
+              <li className="detail__border-item">France</li>
             </ul>
           </div>
         </div>

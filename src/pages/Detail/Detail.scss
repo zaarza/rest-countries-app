@@ -3,85 +3,17 @@
 .detail {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px;
+    padding: 25px 30px;
     padding-bottom: 100px;
     row-gap: 50px;
     max-width: variable.$breakpoint-desktop;
     margin: auto;
 
-    &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        row-gap: 50px;
-        column-gap: 50px;
-
-        &-flag {
-            width: 100%;
-            &__image {
-                width: 100%;
-            }
-        }
-
-        &-description {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            row-gap: 30px;
-
-            &__name {
-                font-size: 1.5rem;
-            }
-
-            &__info {
-                display: flex;
-                flex-direction: column;
-                &-details {
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 20px;
-                }
-            }
-
-            &__property {
-                display: flex;
-                column-gap: 10px;
-            }
-
-            &__border {
-                display: flex;
-                flex-direction: column;
-                row-gap: 10px;
-
-                &-title {
-                    font-size: 1.2rem;
-                    font-weight: variable.$weight-1;
-                }
-
-                &-list {
-                    list-style: none;
-                    display: flex;
-                    column-gap: 15px;
-                    font-weight: variable.$weight-2;
-
-                    &__item {
-                        background-color: variable.$white;
-                        border-radius: variable.$rounded-1;
-                        box-shadow: variable.$shadow-1;
-                        padding: 10px 30px;
-                        width: fit-content;
-                    }
-                }
-            }
-        }
-    }
-
     &__back {
         background-color: variable.$white;
-        box-shadow: variable.$shadow-1;
+        box-shadow: variable.$shadow-2;
         border-radius: variable.$rounded-1;
-        padding: 10px 30px;
+        padding: 10px 25px;
         width: fit-content;
         display: flex;
         align-items: center;
@@ -97,6 +29,76 @@
             color: variable.$very-dark-blue-text;
         }
     }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+
+    &__flag {
+        width: 100%;
+
+        &-image {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__property {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &__border {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        &-title {
+            font-size: 1.2rem;
+            font-weight: variable.$weight-1;
+        }
+    
+        &-list {
+            list-style: none;
+            display: flex;
+            column-gap: 15px;
+            font-weight: variable.$weight-2;
+        }
+
+        &-item {
+            background-color: variable.$white;
+            border-radius: variable.$rounded-1;
+            box-shadow: variable.$shadow-2;
+            padding: 10px 25px;
+            width: fit-content;
+        }
+    }
 }
 
 @media screen and (min-width: variable.$breakpoint-tablet) {
@@ -106,27 +108,30 @@
         &__body {
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: center;
-            column-gap: 100px;
+        }
 
-            &-flag {
-                max-width: 500px;
-            }
+        &__flag {
+            max-width: 500px;
+        }
 
-            &-description {
-                width: fit-content;
+        &__description {
+            width: 50%;
+        }
 
-                &__border {
-                    flex-direction: row;
-                    align-items: center;
-                    column-gap: 20px;
-                }
+        &__info {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-                &__info {
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    column-gap: 50px;
-                }
+        &__border {
+            flex-direction: row;
+            align-items: center;
+            column-gap: 20px;
+
+            &-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 20px;
             }
         }
     }

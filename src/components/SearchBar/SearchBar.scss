@@ -12,13 +12,13 @@
     max-height: 74px;
     width: 100%;
 
-    .search-icon {
+    &__icon {
         width: 24px;
         height: 24px;
         fill: variable.$dark-gray;
     }
 
-    .search-input {
+    &__input {
         font-family: variable.$font-family;
         color: variable.$dark-gray;
         outline: none;

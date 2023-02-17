@@ -18,22 +18,22 @@
         margin: auto;
     }
 
-    &-title {
+    &__title {
         font-weight: variable.$weight-3;
     }
 
-    .toggle-theme {
+    &__toggle-theme {
         all: unset;
         cursor: pointer;
         font-weight: variable.$weight-1;
         display: flex;
         align-items: center;
         column-gap: 15px;
+    }
 
-        &-icon {
-            width: 24px;
-            height: 24px;
-        }
+    &__toggle-theme__icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
