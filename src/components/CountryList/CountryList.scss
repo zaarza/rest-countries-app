@@ -6,9 +6,9 @@
     flex-direction: column;
     gap: 80px;
     align-items: center;
-    
+
     &__item {
-        width: 100%;
+        width: fit-content;
     }
 }
 
@@ -16,10 +16,6 @@
     .country-list {
         flex-direction: row;
         flex-wrap: wrap;
-
-        &__item {
-            flex-basis: 200px;
-            flex-grow: 1;
-        }
+        justify-content: space-between;
     }
 }

@@ -5,9 +5,20 @@
     border-radius: variable.$rounded-1;
     box-shadow: variable.$shadow-1;
     overflow: hidden;
+    width: 300px;
+    height: 400px;
 
     &__flag-image {
         width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__country-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 240px;
     }
 
     &__body {
