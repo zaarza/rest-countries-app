@@ -2,14 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 
 // Reducers
 import countriesReducer from './countries/reducer';
-import loadingReducer from './loading/reducer';
-import searchReducer from './search/reducer';
+import preLoadingReducer from './preLoading/reducer';
+import filtersReducer from './filters/reducer';
 
 const store = configureStore({
   reducer: {
+    preLoading: preLoadingReducer,
     countries: countriesReducer,
-    loading: loadingReducer,
-    search: searchReducer,
+    filters: filtersReducer,
   },
 });
 

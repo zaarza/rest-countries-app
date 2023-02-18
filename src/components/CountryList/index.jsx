@@ -1,45 +1,23 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-cycle */
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { asyncGetAllCountries } from '../../states/countries/action';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
 import CountryCard from '../CountryCard';
+import { getFilteredCountries } from '../../utils';
 import './CountryList.scss';
 
 function CountryList() {
-  const dispatch = useDispatch();
-  const { countries, loading, search } = useSelector((state) => state);
+  const { preLoading, countries, filters } = useSelector((state) => state);
 
-  useEffect(() => {
-    dispatch(asyncGetAllCountries());
-  }, [dispatch]);
-
-  if (loading) {
-    return (
-      <p>Loading...</p>
-    );
-  }
-
-  if (search.searchMode === true) {
-    return (
-      <ul className="country-list">
-        {search.searchResult.map((country) => (
-          <li className="country-list__item">
-            <CountryCard country={country} key={country.population} />
-          </li>
-        ))}
-      </ul>
-    );
+  if (preLoading) {
+    return <p>Loading...</p>;
   }
 
   return (
-    <ul className="country-list">
-      {countries.countriesList.map((country) => (
-        <li className="country-list__item">
-          <CountryCard country={country} key={country.population} />
-        </li>
-      ))}
-    </ul>
+    <div className="country-list">
+      {getFilteredCountries(countries.countriesList, filters).map((country) => <CountryCard country={country} key={country.id} />)}
+    </div>
   );
 }
 

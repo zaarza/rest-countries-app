@@ -1,27 +1,22 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSearchModeActionCreator, receiveSearchResult } from '../../states/search/action';
+import { useDispatch } from 'react-redux';
 import './SearchBar.scss';
+import { receiveFilterQueryActionCreator } from '../../states/filters/action';
 
 function SearchBar() {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState('');
-  const { search, countries } = useSelector((state) => state);
 
   const searchQueryHandler = (event) => {
     setSearchQuery(event.target.value);
   };
 
   useEffect(() => {
-    if (searchQuery !== '') {
-      search.searchMode === false && dispatch(setSearchModeActionCreator(true));
-      const result = countries.countriesList.filter((country) => country.name.common.toLowerCase().includes(searchQuery.toLowerCase()));
-      dispatch(receiveSearchResult(result));
-    } else {
-      dispatch(setSearchModeActionCreator(false));
-    }
+    setTimeout(() => {
+      dispatch(receiveFilterQueryActionCreator('name', searchQuery));
+    }, 800);
   }, [searchQuery]);
 
   return (

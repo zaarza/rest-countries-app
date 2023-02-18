@@ -16,7 +16,7 @@ function CountryCard({ country }) {
           <img className="country-card__flag-image" src={flags.svg} alt="" />
         </div>
         <div className="country-card__body">
-          <h1 className="country-card__country-name">{name.common}</h1>
+          <h1 className="country-card__country-name">{name}</h1>
           <div className="country-card__description">
             <p className="country-card__property"><span className="country-card__key">Population:</span> <span className="country-card__value">{population}</span></p>
             <p className="country-card__property"><span className="country-card__key">Region:</span> <span className="country-card__value">{region}</span></p>

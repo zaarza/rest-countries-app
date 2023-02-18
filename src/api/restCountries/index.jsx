@@ -1,6 +1,7 @@
-const BASE_URL = 'https://restcountries.com/v3.1';
+const BASE_URL = 'https://restcountries.com/v2';
 
 export const getAllCountries = async () => {
+  console.log('FETCHING');
   const response = await fetch(`${BASE_URL}/all`);
   const responseJson = await response.json();
 
@@ -10,10 +11,10 @@ export const getAllCountries = async () => {
 
   const data = responseJson.map((country) => {
     const {
-      name, population, region, capital, flags,
+      name, population, region, capital, flags, numericCode,
     } = country;
     return {
-      name, population, region, capital, flags,
+      name, population, region, capital, flags, id: numericCode,
     };
   });
 
