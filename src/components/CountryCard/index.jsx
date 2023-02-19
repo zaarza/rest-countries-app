@@ -6,11 +6,11 @@ import './CountryCard.scss';
 
 function CountryCard({ country }) {
   const {
-    name, population, region, capital, flags,
+    name, population, region, capital, flags, countryCode,
   } = country;
 
   return (
-    <Link to="/detail">
+    <Link to={`detail/${countryCode}`}>
       <div className="country-card">
         <div className="country-card__flag-wrapper">
           <img className="country-card__flag-image" src={flags.svg} alt="" />

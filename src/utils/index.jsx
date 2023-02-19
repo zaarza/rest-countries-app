@@ -1,3 +1,4 @@
 import getFilteredCountries from './getFilteredCountries';
+import joinLanguages from './joinLanguages';
 
-export { getFilteredCountries };
+export { getFilteredCountries, joinLanguages };

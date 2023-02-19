@@ -16,7 +16,7 @@ function CountryList() {
 
   return (
     <div className="country-list">
-      {getFilteredCountries(countries.countriesList, filters).map((country) => <CountryCard country={country} key={country.id} />)}
+      {getFilteredCountries(countries, filters).map((country) => <CountryCard country={country} key={country.countryCode} />)}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 const BASE_URL = 'https://restcountries.com/v2';
 
 export const getAllCountries = async () => {
-  console.log('FETCHING');
+  console.log('fetching countries');
   const response = await fetch(`${BASE_URL}/all`);
   const responseJson = await response.json();
 
@@ -11,75 +11,96 @@ export const getAllCountries = async () => {
 
   const data = responseJson.map((country) => {
     const {
-      name, population, region, capital, flags, numericCode,
+      name, population, region, capital, flags, alpha3Code,
     } = country;
     return {
-      name, population, region, capital, flags, id: numericCode,
+      name,
+      population,
+      region,
+      capital,
+      flags,
+      countryCode: alpha3Code,
     };
   });
 
-  console.log('DONE');
+  console.log('done fetching countries');
   return data;
 };
 
-export const getCountryDetailsByFullName = async (fullNameCountry) => {
-  const response = await fetch(`${BASE_URL}/name/${fullNameCountry}?fullText=true`);
+export const getCountryDetailsByFullName = async (fullName) => {
+  console.log('fetching country details');
+  const response = await fetch(`${BASE_URL}/name/${fullName}?fullText=true`);
   const responseJson = await response.json();
 
   if (responseJson.length === 0) {
     throw new Error('Failed to fetch countries data');
   }
 
-  const data = responseJson.map((country) => {
-    const {
-      name, nativeName, population, region, subregion,
-      capital, topLevelDomain, currencies, languanges, borders,
-    } = country;
+  const {
+    flags,
+    name,
+    nativeName,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+    population,
+  } = responseJson[0];
 
-    return {
-      name,
-      nativeName,
-      population,
-      region,
-      subregion,
-      capital,
-      topLevelDomain,
-      currencies,
-      languanges,
-      borders,
-    };
-  });
-
-  return data;
+  console.log('done fetching country details');
+  return {
+    flags,
+    name,
+    nativeName,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+    population,
+  };
 };
 
-export const getCountryByCountryCode = async (countryCode) => {
+export const getCountryDetailByCode = async (countryCode) => {
+  console.log('Fetching country detail');
   const response = await fetch(`${BASE_URL}/alpha/${countryCode}`);
   const responseJson = await response.json();
 
-  if (responseJson.length === 0) {
+  if (responseJson.name === undefined) {
     throw new Error('Failed to fetch countries data');
   }
 
-  const data = responseJson.map((country) => {
-    const {
-      name, nativeName, population, region, subregion,
-      capital, topLevelDomain, currencies, languanges, borders,
-    } = country;
+  const {
+    flags,
+    name,
+    nativeName,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+    population,
+  } = responseJson;
 
-    return {
-      name,
-      nativeName,
-      population,
-      region,
-      subregion,
-      capital,
-      topLevelDomain,
-      currencies,
-      languanges,
-      borders,
-    };
-  });
-
-  return data;
+  console.log('Done fetching country detail');
+  return {
+    flags,
+    name,
+    nativeName,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+    population,
+  };
 };

@@ -1,9 +1,8 @@
-import { getAllCountries, getCountryDetailsByFullName, getCountryByCountryCode } from '../../api/restCountries';
+import { getAllCountries, getCountryDetailByCode, getCountryDetailsByFullName } from '../../api/restCountries';
 
 export const ActionType = {
   RECEIVE_ALL_COUNTRIES: 'RECEIVE_ALL_COUNTRIES',
-  RECEIVE_DETAIL_COUNTRY_BY_FULL_NAME: 'RECEIVE_DETAIL_COUNTRY_BY_FULL_NAME',
-  RECEIVE_DETAIL_COUNTRY_BY_COUNTRY_CODE: 'RECEIVE_DETAIL_COUNTRY_BY_COUNTRY_CODE',
+  RECEIVE_DETAIL_COUNTRY: 'RECEIVE_DETAIL_COUNTRY',
 };
 
 export const receiveAllCountriesActionCreator = (countries) => ({
@@ -11,13 +10,8 @@ export const receiveAllCountriesActionCreator = (countries) => ({
   payload: countries,
 });
 
-export const receiveDetailCountryByFullNameActionCreator = (country) => ({
-  type: ActionType.RECEIVE_DETAIL_COUNTRY_BY_FULL_NAME,
-  payload: country,
-});
-
-export const receiveDetailCountryByCountryCodeActionCreator = (country) => ({
-  type: ActionType.RECEIVE_DETAIL_COUNTRY_BY_COUNTRY_CODE,
+export const receiveDetailCountryActionCreator = (country) => ({
+  type: ActionType.RECEIVE_DETAIL_COUNTRY,
   payload: country,
 });
 
@@ -30,19 +24,19 @@ export const asyncGetAllCountries = () => async (dispatch) => {
   }
 };
 
-export const asyncGetDetailCountryByFullName = (fullNameCountry) => async (dispatch) => {
+export const asyncGetDetailCountryByFullName = (fullName) => async (dispatch) => {
   try {
-    const country = await getCountryDetailsByFullName(fullNameCountry);
-    dispatch(receiveDetailCountryByFullNameActionCreator(country));
+    const country = await getCountryDetailsByFullName(fullName);
+    dispatch(receiveDetailCountryActionCreator(country));
   } catch (error) {
     alert(error.message);
   }
 };
 
-export const asyncGetDetailCountryByCountryCode = (countryCode) => async (dispatch) => {
+export const asyncGetDetailCountryByCode = (code) => async (dispatch) => {
   try {
-    const country = await getCountryByCountryCode(countryCode);
-    dispatch(receiveDetailCountryByFullNameActionCreator(country));
+    const country = await getCountryDetailByCode(code);
+    dispatch(receiveDetailCountryActionCreator(country));
   } catch (error) {
     alert(error.message);
   }
