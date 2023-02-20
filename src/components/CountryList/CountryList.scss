@@ -4,18 +4,15 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 50px;
     align-items: center;
-
-    &__item {
-        width: fit-content;
-    }
 }
 
 @media screen and (min-width: variable.$breakpoint-tablet) {
     .country-list {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 80px;
         justify-content: center;
     }
 }

@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { populationFormatter } from '../../utils';
 import './CountryCard.scss';
 
 function CountryCard({ country }) {
@@ -18,7 +19,7 @@ function CountryCard({ country }) {
         <div className="country-card__body">
           <h1 className="country-card__country-name">{name}</h1>
           <div className="country-card__description">
-            <p className="country-card__property"><span className="country-card__key">Population:</span> <span className="country-card__value">{population}</span></p>
+            <p className="country-card__property"><span className="country-card__key">Population:</span> <span className="country-card__value">{populationFormatter(population)}</span></p>
             <p className="country-card__property"><span className="country-card__key">Region:</span> <span className="country-card__value">{region}</span></p>
             <p className="country-card__property"><span className="country-card__key">Capital:</span> <span className="country-card__value">{capital}</span></p>
           </div>

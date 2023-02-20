@@ -10,12 +10,16 @@
     align-items: center;
     column-gap: 25px;
     max-height: 74px;
+    min-width: 172px;
     width: 100%;
 
     &__icon {
         width: 24px;
         height: 24px;
         fill: variable.$dark-gray;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
     }
 
     &__input {
@@ -26,10 +30,12 @@
         font-size: variable.$font-size-2;
         border: none;
         width: 100%;
+        text-overflow: ellipsis;
 
         &::placeholder {
             font-size: variable.$font-size-2;
             color: variable.$dark-gray;
+            text-overflow: ellipsis;
         }
     }
 }

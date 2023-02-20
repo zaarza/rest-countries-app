@@ -7,14 +7,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { asyncGetDetailCountryByFullName, asyncGetDetailCountryByCode, receiveDetailCountryActionCreator } from '../../states/countryDetail/action';
 import { asyncGetAllCountries } from '../../states/countries/action';
-import { joinLanguages } from '../../utils';
+import { joinLanguages, populationFormatter } from '../../utils';
 import './Detail.scss';
 
 function Detail() {
   const { countryCode } = useParams();
   const dispatch = useDispatch();
   const { countryDetail, countries } = useSelector((state) => state);
-  console.log(countryDetail);
 
   useEffect(() => {
     if (countries.length === 0) {
@@ -29,8 +28,6 @@ function Detail() {
   if (Object.keys(countryDetail).length === 0) {
     return <p>Loading</p>;
   }
-
-  console.log(countryDetail);
 
   return (
     <div className="detail">
@@ -57,7 +54,7 @@ function Detail() {
               </div>
               <div className="detail__property">
                 <p className="detail__key">Population:</p>
-                <p className="detail__value">{countryDetail.population || 'unknown'}</p>
+                <p className="detail__value">{populationFormatter(countryDetail.population) || 'unknown'}</p>
               </div>
               <div className="detail__property">
                 <p className="detail__key">Region:</p>
