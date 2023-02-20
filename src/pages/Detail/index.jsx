@@ -9,11 +9,13 @@ import { asyncGetDetailCountryByFullName, asyncGetDetailCountryByCode, receiveDe
 import { asyncGetAllCountries } from '../../states/countries/action';
 import { joinLanguages, populationFormatter } from '../../utils';
 import './Detail.scss';
+import DetailPageSkeleton from '../../components/DetailPageSkeleton';
 
 function Detail() {
   const { countryCode } = useParams();
   const dispatch = useDispatch();
   const { countryDetail, countries } = useSelector((state) => state);
+  const tes = true;
 
   useEffect(() => {
     if (countries.length === 0) {
@@ -26,7 +28,9 @@ function Detail() {
   }, [dispatch]);
 
   if (Object.keys(countryDetail).length === 0) {
-    return <p>Loading</p>;
+    return (
+      <DetailPageSkeleton />
+    );
   }
 
   return (

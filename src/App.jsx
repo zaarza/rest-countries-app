@@ -33,7 +33,9 @@ function App() {
         className="tes"
         style={{
           backgroundColor: 'var(--text)',
-          height: '2px',
+          height: '3px',
+          position: 'absolute',
+          zIndex: 999,
         }}
       />
       <Routes>
