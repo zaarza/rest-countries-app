@@ -1,6 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { configureStore } from '@reduxjs/toolkit';
 
 // Reducers
+import { loadingBarReducer } from 'react-redux-loading-bar';
 import countriesReducer from './countries/reducer';
 import preLoadingReducer from './preLoading/reducer';
 import filtersReducer from './filters/reducer';
@@ -14,6 +16,7 @@ const store = configureStore({
     filters: filtersReducer,
     countryDetail: countryDetailReducer,
     theme: themeReducer,
+    loadingBar: loadingBarReducer,
   },
 });
 

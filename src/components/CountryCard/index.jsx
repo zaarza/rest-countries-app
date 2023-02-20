@@ -14,7 +14,7 @@ function CountryCard({ country }) {
     <Link to={`detail/${countryCode}`}>
       <div className="country-card">
         <div className="country-card__flag-wrapper">
-          <img className="country-card__flag-image" src={flags.svg} alt="" />
+          <img className="country-card__flag-image" loading="lazy" src={flags.svg} alt="" />
         </div>
         <div className="country-card__body">
           <h1 className="country-card__country-name">{name}</h1>

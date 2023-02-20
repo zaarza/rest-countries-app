@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import LoadingBar from 'react-redux-loading-bar';
 import { Home, HomeMain, Detail } from './pages';
 import { changeThemeLocalStorage, getCurrentThemeLocalStorage } from './api/localStorage';
 import { changeTheme } from './utils';
@@ -27,12 +28,21 @@ function App() {
   }, [theme]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />}>
-        <Route path="/" element={<HomeMain />} />
-        <Route path="/detail/:countryCode" element={<Detail />} />
-      </Route>
-    </Routes>
+    <>
+      <LoadingBar
+        className="tes"
+        style={{
+          backgroundColor: 'var(--text)',
+          height: '2px',
+        }}
+      />
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/" element={<HomeMain />} />
+          <Route path="/detail/:countryCode" element={<Detail />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
