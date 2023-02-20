@@ -5,6 +5,7 @@ import countriesReducer from './countries/reducer';
 import preLoadingReducer from './preLoading/reducer';
 import filtersReducer from './filters/reducer';
 import countryDetailReducer from './countryDetail/reducer';
+import themeReducer from './theme/reducer';
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     countries: countriesReducer,
     filters: filtersReducer,
     countryDetail: countryDetailReducer,
+    theme: themeReducer,
   },
 });
 

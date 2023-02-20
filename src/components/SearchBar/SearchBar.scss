@@ -2,7 +2,7 @@
 
 .search-form {
     padding: variable.$padding-1;
-    background-color: variable.$white;
+    background-color: var(--elements);
     box-shadow: variable.$shadow-1;
     border-radius: variable.$rounded-1;
     display: flex;
@@ -16,7 +16,7 @@
     &__icon {
         width: 24px;
         height: 24px;
-        fill: variable.$dark-gray;
+        fill: var(--text);
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -24,7 +24,8 @@
 
     &__input {
         font-family: variable.$font-family;
-        color: variable.$dark-gray;
+        background-color: transparent;
+        color: var(--text);
         outline: none;
         font-weight: variable.$weight-1;
         font-size: variable.$font-size-2;
@@ -34,7 +35,7 @@
 
         &::placeholder {
             font-size: variable.$font-size-2;
-            color: variable.$dark-gray;
+            color: var(--text);
             text-overflow: ellipsis;
         }
     }

@@ -10,7 +10,7 @@
     margin: auto;
 
     &__back {
-        background-color: variable.$white;
+        background-color: var(--elements);
         box-shadow: variable.$shadow-2;
         border-radius: variable.$rounded-1;
         padding: 10px 25px;
@@ -22,11 +22,11 @@
         &-icon {
             width: 24px;
             height: 24px;
-            fill: variable.$very-dark-blue-text;
+            fill: var(--text);
         }
 
         &-text {
-            color: variable.$very-dark-blue-text;
+            color: var(--text);
         }
     }
 
@@ -56,12 +56,14 @@
 
     &__name {
         font-size: 1.5rem;
+        color: var(--text);
     }
 
     &__info {
         display: flex;
         row-gap: 50px;
         flex-direction: column;
+        color: var(--text);
     }
 
     &__details {
@@ -75,6 +77,14 @@
         column-gap: 10px;
     }
 
+    &__key {
+        font-weight: variable.$weight-2;
+    }
+
+    &__value {
+        font-weight: variable.$weight-1;
+    }
+
     &__border {
         display: flex;
         flex-direction: column;
@@ -82,8 +92,9 @@
 
         &-title {
             font-size: 1.2rem;
-            font-weight: variable.$weight-1;
+            font-weight: variable.$weight-2;
             min-width: fit-content;
+            color: var(--text);
         }
     
         &-list {
@@ -91,11 +102,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            font-weight: variable.$weight-2;
+            font-weight: variable.$weight-1;
         }
 
         &-item {
-            background-color: variable.$white;
+            background-color: var(--elements);
+            color: var(--text);
             border-radius: variable.$rounded-1;
             box-shadow: variable.$shadow-2;
             padding: 10px 25px;
