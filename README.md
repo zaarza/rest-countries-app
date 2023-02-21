@@ -13,8 +13,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ### Links
 
-- [Repository](https://your-solution-url.com)
-- [Live preview](https://your-live-site-url.com)
+- [Repository](https://github.com/zaarza/rest-countries-app)
+- [Live preview](https://rest-countries-app-zaarza.vercel.app/)
 
 ## My process
 
@@ -44,7 +44,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ## Author
 
-- Website - [Arzaqul Mughny](https://www.zaarza.github.io)
+- Website - [Arzaqul Mughny Al Fawwaz](https://www.zaarza.github.io)
 - Frontend Mentor - [@zaarza](https://www.frontendmentor.io/profile/zaarza)
 
 
