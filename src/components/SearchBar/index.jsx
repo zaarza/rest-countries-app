@@ -2,16 +2,21 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './SearchBar.scss';
 import { receiveFilterQueryActionCreator } from '../../states/filters/action';
 
 function SearchBar() {
   const dispatch = useDispatch();
-  const [searchQuery, setSearchQuery] = useState('');
+  const { filters } = useSelector((state) => state);
+  const [searchQuery, setSearchQuery] = useState(filters.filter((filterItem) => filterItem.name === 'name')[0].query);
 
   const searchQueryHandler = (event) => {
     setSearchQuery(event.target.value);
+  };
+
+  const clearQueryHandler = () => {
+    setSearchQuery('');
   };
 
   useEffect(() => {
@@ -29,6 +34,15 @@ function SearchBar() {
         </svg>
       </label>
       <input onInput={searchQueryHandler} id="search-input" value={searchQuery} type="text" className="search-form__input" placeholder="Search for a country..." />
+      {searchQuery !== '' && (
+      <button onClick={clearQueryHandler} type="button" className="search-form__clear">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+        </svg>
+      </button>
+      )}
+
     </form>
   );
 }

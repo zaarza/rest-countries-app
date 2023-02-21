@@ -1,7 +1,6 @@
 const BASE_URL = 'https://restcountries.com/v2';
 
 export const getAllCountries = async () => {
-  console.log('fetching countries');
   const response = await fetch(`${BASE_URL}/all`);
   const responseJson = await response.json();
 
@@ -23,12 +22,10 @@ export const getAllCountries = async () => {
     };
   });
 
-  console.log('done fetching countries');
   return data;
 };
 
 export const getCountryDetailsByFullName = async (fullName) => {
-  console.log('fetching country details');
   const response = await fetch(`${BASE_URL}/name/${fullName}?fullText=true`);
   const responseJson = await response.json();
 
@@ -50,7 +47,6 @@ export const getCountryDetailsByFullName = async (fullName) => {
     population,
   } = responseJson[0];
 
-  console.log('done fetching country details');
   return {
     flags,
     name,
@@ -67,7 +63,6 @@ export const getCountryDetailsByFullName = async (fullName) => {
 };
 
 export const getCountryDetailByCode = async (countryCode) => {
-  console.log('Fetching country detail');
   const response = await fetch(`${BASE_URL}/alpha/${countryCode}`);
   const responseJson = await response.json();
 
@@ -89,7 +84,6 @@ export const getCountryDetailByCode = async (countryCode) => {
     population,
   } = responseJson;
 
-  console.log('Done fetching country detail');
   return {
     flags,
     name,

@@ -18,16 +18,16 @@
         display: flex;
         align-items: center;
         column-gap: 10px;
+    }
 
-        &-icon {
-            width: 24px;
-            height: 24px;
-            fill: var(--text);
-        }
+    &__back-icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--text);
+    }
 
-        &-text {
-            color: var(--text);
-        }
+    &__back-text {
+        color: var(--text);
     }
 
     &__body {
@@ -41,10 +41,10 @@
 
     &__flag {
         width: 100%;
+    }
 
-        &-image {
-            width: 100%;
-        }
+    &__flag-image {
+        width: 100%;
     }
 
     &__description {
@@ -89,31 +89,31 @@
         display: flex;
         flex-direction: column;
         row-gap: 10px;
+    }
 
-        &-title {
-            font-size: 1.2rem;
-            font-weight: variable.$weight-2;
-            min-width: fit-content;
-            color: var(--text);
-        }
-    
-        &-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-weight: variable.$weight-1;
-        }
+    &__border-title {
+        font-size: 1.2rem;
+        font-weight: variable.$weight-2;
+        min-width: fit-content;
+        color: var(--text);
+    }
 
-        &-item {
-            background-color: var(--elements);
-            color: var(--text);
-            border-radius: variable.$rounded-1;
-            box-shadow: variable.$shadow-2;
-            padding: 10px 25px;
-            cursor: pointer;
-            width: fit-content;
-        }
+    &__border-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-weight: variable.$weight-1;
+    }
+
+    &__border-item {
+        background-color: var(--elements);
+        color: var(--text);
+        border-radius: variable.$rounded-1;
+        box-shadow: variable.$shadow-2;
+        padding: 10px 25px;
+        cursor: pointer;
+        width: fit-content;
     }
 }
 
@@ -150,12 +150,12 @@
             max-width: 35em;
             flex-direction: row;
             column-gap: 20px;
+        }
 
-            &-list {
-                flex-direction: row;
-                flex-wrap: wrap;
-                column-gap: 20px;
-            }
+        &__border-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 20px;
         }
     }
 }

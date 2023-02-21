@@ -1,8 +1,10 @@
 import getFilteredCountries from './getFilteredCountries';
-import joinLanguages from './joinLanguages';
+import joinArrayWithCommas from './joinArrayWithCommas';
 import populationFormatter from './populationFormatter';
 import changeTheme from './changeTheme';
+import getFullCountryNameByCodeFromCountries from './getFullCountryNameByCodeFromCountries';
 
 export {
-  getFilteredCountries, joinLanguages, populationFormatter, changeTheme,
+  getFilteredCountries, joinArrayWithCommas, populationFormatter, changeTheme,
+  getFullCountryNameByCodeFromCountries,
 };

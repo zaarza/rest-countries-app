@@ -28,15 +28,17 @@
         width: 200px;
         height: 20px;
         background-color: var(--bg);
+    }
 
-        &:nth-child(1) {
-            width: 150px;
-        }
-        &:nth-child(2) {
-            width: 100px;
-        }
-        &:nth-child(3) {
-            width: 180px;
-        }
+    &__description:nth-child(1) {
+        width: 150px;
+    }
+
+    &__description:nth-child(2) {
+        width: 100px;
+    }
+    
+    &__description:nth-child(3) {
+        width: 180px;
     }
 }

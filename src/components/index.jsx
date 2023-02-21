@@ -7,5 +7,6 @@ import CountryCardSkeleton from './CountryCardSkeleton';
 import DetailPageSkeleton from './DetailPageSkeleton';
 
 export {
-  Navbar, SearchBar, SelectRegion, CountryList, CountryCard, CountryCardSkeleton, DetailPageSkeleton,
+  Navbar, SearchBar, SelectRegion, CountryList, CountryCard, CountryCardSkeleton,
+  DetailPageSkeleton,
 };

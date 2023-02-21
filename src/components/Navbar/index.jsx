@@ -1,18 +1,18 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { changeThemeActionCreator } from '../../states/theme/action';
 import './Navbar.scss';
 
 function Navbar() {
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state);
-
   const changeThemeHandler = () => (theme === 'light' ? dispatch(changeThemeActionCreator('dark')) : dispatch(changeThemeActionCreator('light')));
 
   return (
     <nav className="navbar">
       <div className="navbar__inner">
-        <p className="navbar__title">Where in the world?</p>
+        <Link to="/"><p className="navbar__title">Where in the world?</p></Link>
         <button onClick={changeThemeHandler} type="button" className="navbar__toggle-theme">
           <span className="navbar__toggle-theme__icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

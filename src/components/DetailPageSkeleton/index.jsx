@@ -14,15 +14,12 @@ function DetailPageSkeleton() {
         </span>
         <span className="detail-skeleton__back-text">Back</span>
       </Link>
-
       <div className="detail-skeleton__body">
         <div className="detail-skeleton__flag" />
-
         <div className="detail-skeleton__description">
           <div className="detail-skeleton__name" />
           <div className="detail-skeleton__info" />
           <div className="detail-skeleton__borders" />
-
         </div>
       </div>
     </div>

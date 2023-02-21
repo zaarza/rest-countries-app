@@ -1,4 +1,4 @@
-@use './../../styles//variable.scss';
+@use './../../styles/_variable.scss';
 
 .search-form {
     padding: variable.$padding-1;
@@ -12,6 +12,7 @@
     max-height: 74px;
     min-width: 172px;
     width: 100%;
+    position: relative;
 
     &__icon {
         width: 24px;
@@ -32,12 +33,22 @@
         border: none;
         width: 100%;
         text-overflow: ellipsis;
+    }
 
-        &::placeholder {
-            font-size: variable.$font-size-2;
-            color: var(--text);
-            text-overflow: ellipsis;
-        }
+    &__input::placeholder {
+        font-size: variable.$font-size-2;
+        color: var(--text);
+        text-overflow: ellipsis;
+    }
+
+    &__clear {
+        all: unset;
+        cursor: pointer;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 35px;
+        fill: var(--text);
     }
 }
 
