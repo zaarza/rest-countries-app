@@ -29,7 +29,7 @@ function Detail() {
   }, [dispatch]);
 
   useEffect(() => {
-    document.title = `${countryDetail.name} Details`;
+    document.title = `${countryDetail.name || ''} Details`;
   });
 
   if (Object.keys(countryDetail).length === 0) {
